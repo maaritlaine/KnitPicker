@@ -2,16 +2,22 @@
 <html ng-app="app">
 <head>
     <title>KnitPicker</title>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+    var socket = io();
+    socket.on('knitevent', function (msg) {
+        $('#messages').append($('<li>').text(msg));
+    });
+    </script>
 </head>
 <body>
+
+    <ul id="messages"></ul>
 
     <!-- inject:css -->
     <!-- endinject -->
     <ng-view>
-        <div>
-            This is an angular application.
-            {{jotaki.viesti.eioo}}
-        </div>
     </ng-view>
 
 
