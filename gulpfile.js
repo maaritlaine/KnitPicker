@@ -22,7 +22,7 @@ var config = require('./gulp.config.js')();
 // Note that because inject task requires other tasks to be run before it executes, also
 // those tasks end up included in the build tasks.
 gulp.task('build', function(done){
-    runSequence('clean', 'copy-fonts', 'copy-templates', 'inject', done);
+    runSequence('clean', 'copy-fonts', 'copy-templates', 'copy-jsonfiles', 'inject', done);
 });
 
 
@@ -148,6 +148,12 @@ gulp.task('copy-templates', function () {
         .pipe(gulp.dest(config.templates.dest));
 });
 
+// C O P Y   J S O N F I L E S 
+// Simple copying of the json file data (json) into build folder.
+gulp.task('copy-jsonfiles', function () {
+    return gulp.src(config.jsonfiles.src)
+        .pipe(gulp.dest(config.jsonfiles.dest));
+});
 
 
 // T H E   D E F A U L T   T A S K

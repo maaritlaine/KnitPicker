@@ -103,7 +103,12 @@ module.exports = function () {
         templates: {
             src: './client/app/**/*.html',
             dest: './build/templates'
-        }
+        },
+
+        jsonfiles: {
+        src: './client/app/**/*.json',
+        dest: './build/data'
+}
 
       
 
