@@ -13,10 +13,6 @@
 
         $routeProvider.when('/', {
             templateUrl: 'templates/chart/chart.html',
-            controller: 'indexController as jotaki'
-        })
-        .when('/chart', {
-            templateUrl: 'templates/chart/chart.html',
             controller: 'chartController as charter'
         });
 

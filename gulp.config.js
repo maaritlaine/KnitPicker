@@ -36,6 +36,7 @@ module.exports = function () {
         js: {
             src: {
                 lib: [
+                './bower_components/lodash/lodash.js',
                 './bower_components/angular/angular.js',
                 './bower_components/angular-route/angular-route.js',
                 './bower_components/angular-translate/angular-translate.js'
@@ -59,11 +60,10 @@ module.exports = function () {
             src: {
                 lib: [
                  './bower_components/bootstrap/dist/css/bootstrap.css',
-                 './bower_components/fontawesome/css/font-awesome.css',
-                 './client/content/grayscale.css'
+                 './bower_components/fontawesome/css/font-awesome.css'
                 ],
                 app: [
-                 './client/content/app.scss'
+                 './client/content/app.css'
                 ]
             },
             concat: {

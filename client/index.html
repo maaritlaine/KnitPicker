@@ -4,16 +4,9 @@
     <title>KnitPicker</title>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-    var socket = io();
-    socket.on('knitevent', function (msg) {
-        $('#messages').append($('<li>').text(msg));
-    });
-    </script>
+  
 </head>
 <body>
-
-    <ul id="messages"></ul>
 
     <!-- inject:css -->
     <!-- endinject -->
@@ -23,6 +16,24 @@
 
     <!-- inject:js -->
     <!-- endinject -->
+    <script>
 
+        ////var socket = io();
+        ////socket.on('knitevent', function (msg) {
+
+        ////    // Direktiivi vois olla tässä ok. Push ja broadcast.
+
+        ////    // Kato sitten tartteko ng:tä, onko joku http juttu vai ei 
+        ////    // msg = angular.injector(['ng', 'app']).get('chartService').nameChart();
+        ////    //$('#messages').append($('<li>').text(msg));
+
+        ////    //charter.data.knittinginstruction.title = 'HEIHEI';
+        ////    $('.fa-times').toggleClass('fa-car');
+
+        ////    var scope = angular.element($(".fa-times")).scope();
+
+
+        ////});
+    </script>
 </body>
 </html>

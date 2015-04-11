@@ -1,9 +1,8 @@
-﻿<div>
-    Knitting chart: {{charter.chart.name}}
-</div>
-<div>
-    CHARTING
-    <br />
-    {{charter | json}}
-    {{charter.instructions | json}}
-</div>
+﻿<div class="container">
+    <h1 class="col-md-12">{{charter.data.knittinginstruction.title}}</h1>
+    <div class="col-md-12"  ng-repeat="row in charter.data.knittinginstruction.rows">
+        <i  ng-repeat="item in row track by $index" class="fa fa-fw" ng-class="{'fa-circle': item ==='X', 'fa-circle-o': item ==='O', 'fa-times': item ==='CHECK'}"></i>
+        <br />
+    </div>
+    <ul id="messages"></ul>
+</div>  
